@@ -11,11 +11,6 @@
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >=4.0 |
 
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_common_tags"></a> [common\_tags](#module\_common\_tags) | git::https://gitlab.app.flozonn.com/flozonn/resources_library/terraform_module/aws_common_tags.git | v1.1.0 |
 
 ## Resources
 
