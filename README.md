@@ -5,22 +5,20 @@
 ## Deploy a static website in 3 A-Z:
 ```Terraform
 module "site" {
-  source                     = "git@gitlab.app.flozonn.com:arc/poc/aws_static_site_mtls.git?ref=v1.0.25"
-  vpc_id                     = "vpc-010bb1f72aaaa8bbb"
-  vpc_public_subnets         = ["subnet-0256e0e800295b3f7", "subnet-04dc53eab8ee0fca9", "subnet-064d65425179c6b24"]
-  s3_vpc_endpoint_id         = "vpce-0b0cd1c2dce3f3657"
-  alb_name                   = "s3-asyncapi"
-  domain                     = "bus-events.arc.poc.flozonn.co"
-  hosted_zone                = "arc.poc.flozonn.co"
+  source                     = "flozonn/static-site-mtls/aws"
+  vpc_id                     = "vpc-XXXXXXX"
+  vpc_public_subnets         = ["subnet-XXXXXXX", "subnet-XXXXXXX", "subnet-064d65425179c6b24"]
+  s3_vpc_endpoint_id         = "vpce-XXXXXXX"
+  alb_name                   = "s3-albName"
+  domain                     = "XXXXXXX.flozonn.co"
+  hosted_zone                = "XXXXXXX.flozonn.co"
   html_file_path             = "./index.html"
   trust_store_bucket_name    = "certs"
   trust_store_bucket_pem_key = "chain2.pem"
   env_name                   = "dev"
-  squad_owner                = "archi"
 }
 ```
-## Schema 
-![archi](./domotix-private_website.jpg)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
